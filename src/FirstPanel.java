@@ -7,6 +7,7 @@ public class FirstPanel extends JPanel{
     public FirstPanel(MainFrame win) {
     	this.win = win;
         setLayout(null);
+        setSize(480,720);
         
     	JButton btn1 = new JButton("단어장");
         JButton btn2 = new JButton("테스트");
@@ -20,21 +21,16 @@ public class FirstPanel extends JPanel{
     	add(btn1);
     	add(btn2);
     		
-    	 btn1.addActionListener(new WordActionListener());
+    	btn1.addActionListener(new WordActionListener());
     	btn2.addActionListener(new TextActionListener());
 		}
     class WordActionListener implements ActionListener{
-
-		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			// TODO Auto-generated method stub
 			win.change("dictPanel"); // 단어장 패널
 		}
     }
     class TextActionListener implements ActionListener{
-		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			// TODO Auto-generated method stub
 			win.change("wordGame"); // 테스트 패널
 		}
     }

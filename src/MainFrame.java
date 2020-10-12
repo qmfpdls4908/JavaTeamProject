@@ -1,7 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
 
 public class MainFrame extends JFrame{
     public DictPanel dictPanel = null;
@@ -42,7 +41,8 @@ public class MainFrame extends JFrame{
         
         win.add(win.firstPanel);
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        win.setSize(1280,720);
+        win.setSize(480,720);
         win.setVisible(true);
+        win.setResizable(false);
     }
 }
